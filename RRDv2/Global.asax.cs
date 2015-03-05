@@ -15,7 +15,7 @@ namespace RRDv2
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RRD.BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

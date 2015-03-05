@@ -3,10 +3,74 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <header class="text-center">
+        <h1>RoomRunDown</h1>
+    </header>
+
+    @using (Html.BeginForm("ResultsPage", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="text" class="form-control input-lg full-width" aria-label="..." name="searchTerm" placeholder="Search Hotels...">
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <br />
+        <div class="row">
+
+            <div class="col-lg-push-4 col-lg-4">
+                @*@Html.ActionLink("Search Rooms", "CreateReflection", "Home", null, new { @class = "btn btn-primary btn-lg full-width" })*@<input type="submit" value="Search Rooms" class="btn btn-primary btn-lg full-width " />
+            </div><!-- /.col-lg-6 -->
+
+        </div>
+    }
 </div>
+
+<div class="testimonials-container parallax" data-stellar-background-ratio="0.4" style="background-position: 0px 482.2px;">
+    <div class="overlaybg"></div><!-- End .overlaybg -->
+    <div class="parallax-content">
+        <div class="container">
+            <header class="parallax-header clearfix text-center md-margin2x">
+                <h2 class="parallax-title clear-margin" style="font-size: 36px;">Testimonials</h2>
+            </header>
+            <div class="row">
+
+                <div class="col-md-8 col-md-push-2 col-sm-8 col-sm-push-2">
+                    <div class="owl-carousel testimonials-carousel owl-theme" style="opacity: 1; display: block;">
+                        <div class="owl-wrapper-outer">
+                            <div class="owl-wrapper" style="width: 4500px; left: 0px; display: block; -webkit-transition: all 0ms ease; transition: all 0ms ease; -webkit-transform: translate3d(-1500px, 0px, 0px); transform: translate3d(-1500px, 0px, 0px); -webkit-transform-origin: 1875px 50% 0px; perspective-origin: 1875px 50%;">
+                                <div class="owl-item" style="width: 750px;">
+                                    <div class="testimonial">
+                                        <figure><img src="images/testimonials/dean.jpg" alt="Dean Winchester"></figure>
+                                        <p>First of all thank you very much for awesome product. What i like about you, is you don't give us only quality products, you also provide awesome supports. I am a life time customer here. When i need to design a website, you will be the one that i will ask to create. Thanks again for the world class design and clean code. Really appreciate.</p>
+                                        <span class="testimonial-owner">Dean Winchester - <span>Ceo of Parke</span></span>
+                                    </div>
+                                </div><div class="owl-item" style="width: 750px;">
+                                    <div class="testimonial">
+                                        <figure><img src="images/testimonials/jane.jpg" alt="Jane Watson"></figure>
+                                        <p>I have used Geass’s services for the last three years. I have three sources of income - one from my rental property, one from my full time job and the other from my investments. Geass pointed out ways I can reduce taxes and boost my income in legitimately creative ways.</p>
+                                        <span class="testimonial-owner">Jane Watson - <span>Developer of Cacky</span></span>
+                                    </div>
+                                </div><div class="owl-item" style="width: 750px;">
+                                    <div class="testimonial">
+                                        <figure><img src="images/testimonials/sam.jpg" alt="Sam Smimsonn"></figure>
+                                        <p>Fantastic product, my sites all run super fast and the support is excellent! Fortunately, Geass was my knight in shining armor. They set me up on their enterprise plan and handled the entire process flawlessly. Thank you very much for helping our company getting better. Can't wait to wokr with you again.</p>
+                                        <span class="testimonial-owner">Sam Smimsonn - <span>Designer of Goopsy</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .testimonial -->
+                        <!-- End .testimonial -->
+                        <!-- End .testimonial -->
+                        <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div>
+                    </div><!-- End. owl-carousel -->
+                </div><!-- End .col-md-8 -->
+
+            </div><!-- End .row -->
+        </div><!-- End .container -->
+    </div><!-- End parallax-content -->
+</div>
+
 
 <div class="row">
     <div class="col-md-4">

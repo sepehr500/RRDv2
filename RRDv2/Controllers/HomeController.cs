@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace RRDv2.Controllers
+namespace RRD.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -24,6 +25,13 @@ namespace RRDv2.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult ResultsPage()
+        {
+            ViewBag.Message = "Hotels matching your search.";
+            String x = Request.QueryString["searchTerm"];
+            ViewBag.SearchTerm = x;
             return View();
         }
     }
