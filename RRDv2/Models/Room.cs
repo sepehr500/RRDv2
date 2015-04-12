@@ -28,7 +28,6 @@ namespace RRDv2.Models
         public int Id { get; set; }
 
         public int FloorId { get; set; }
-        public int ReviewId { get; set; }
         public int RoomNum { get; set; }
         public int NumberOfBeds { get; set; }
         public BedSize BedSize { get; set; }

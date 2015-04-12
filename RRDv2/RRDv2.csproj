@@ -160,6 +160,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,10 +176,16 @@
     <Compile Include="Migrations\201504122059189_ChangedStuff.Designer.cs">
       <DependentUpon>201504122059189_ChangedStuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504122128075_RoomIDChange.cs" />
+    <Compile Include="Migrations\201504122128075_RoomIDChange.Designer.cs">
+      <DependentUpon>201504122128075_RoomIDChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
+    <Compile Include="Controllers\FloorsController.cs" />
     <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Room.cs" />
@@ -239,6 +246,21 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ResultsPage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Hotels\Create.cshtml" />
+    <Content Include="Views\Hotels\Delete.cshtml" />
+    <Content Include="Views\Hotels\Details.cshtml" />
+    <Content Include="Views\Hotels\Edit.cshtml" />
+    <Content Include="Views\Hotels\Index.cshtml" />
+    <Content Include="Views\Floors\Create.cshtml" />
+    <Content Include="Views\Floors\Delete.cshtml" />
+    <Content Include="Views\Floors\Details.cshtml" />
+    <Content Include="Views\Floors\Edit.cshtml" />
+    <Content Include="Views\Floors\Index.cshtml" />
+    <Content Include="Views\Rooms\Create.cshtml" />
+    <Content Include="Views\Rooms\Delete.cshtml" />
+    <Content Include="Views\Rooms\Details.cshtml" />
+    <Content Include="Views\Rooms\Edit.cshtml" />
+    <Content Include="Views\Rooms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -259,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504122059189_ChangedStuff.resx">
       <DependentUpon>201504122059189_ChangedStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504122128075_RoomIDChange.resx">
+      <DependentUpon>201504122128075_RoomIDChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
