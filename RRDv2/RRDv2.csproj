@@ -167,6 +167,10 @@
     <Compile Include="Migrations\201503050117059_FirstOne.Designer.cs">
       <DependentUpon>201503050117059_FirstOne.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504122055074_RoomType.cs" />
+    <Compile Include="Migrations\201504122055074_RoomType.Designer.cs">
+      <DependentUpon>201504122055074_RoomType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -245,6 +249,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503050117059_FirstOne.resx">
       <DependentUpon>201503050117059_FirstOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504122055074_RoomType.resx">
+      <DependentUpon>201504122055074_RoomType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -14,6 +14,14 @@ namespace RRDv2.Models
         Full,
         King
     }
+    public enum RoomType
+    {
+        Guest,
+        Suite,
+        Executive,
+        Tripple,
+        Standard
+    }
     public class Room
     {
 
@@ -24,7 +32,7 @@ namespace RRDv2.Models
         public int RoomNum { get; set; }
         public int NumberOfBeds { get; set; }
         public BedSize BedSize { get; set; }
-        public virtual RoomType RoomType { get; set; }
+        public RoomType RoomType { get; set; }
         public virtual Floor Floor { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
 
