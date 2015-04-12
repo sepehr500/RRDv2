@@ -9,7 +9,7 @@ namespace RRDv2.Models
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public ushort Stars { get; set; }
+        public int Stars { get; set; }
         public string Description { get; set; }
         public string UserId { get; set; }
         public int RoomId { get; set; }
