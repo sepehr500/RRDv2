@@ -56,7 +56,7 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,RoomNum,NumberOfBeds,BedSize,RoomType")] Room room)
+        public ActionResult Create([Bind(Include = "Id,RoomNum,NumberOfBeds,BedSize,RoomType, RoomSize, ElevatorDistance , ConnectingRoom")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FloorId,RoomNum,NumberOfBeds,BedSize,RoomType")] Room room)
+        public ActionResult Edit([Bind(Include = "Id,RoomNum,NumberOfBeds,BedSize,RoomType, RoomSize, ElevatorDistance , ConnectingRoom")] Room room)
         {
             if (ModelState.IsValid)
             {
