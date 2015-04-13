@@ -20,8 +20,10 @@ namespace RRDv2.Controllers
             var floors = db.Floors.Include(f => f.Hotel);
             if (HotelId != -1)
             {
-            floors = db.Floors.Where(x => x.HotelId == HotelId).Include(f => f.Hotel);
 
+                Session["HotelId"] = HotelId;
+                floors = db.Floors.Where(x => x.HotelId == HotelId).Include(f => f.Hotel);
+                
                 
             }
             return View(floors.ToList());
@@ -60,10 +62,13 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(int HotelId = -1, int NumFloor = 0)
+        public ActionResult Create([Bind(Include = "Id,HotelId,FloorNum")] Floor floor)
+        
         {
-
-            for (int i = 0; i < NumFloor; i++)
+            int num_floors = Convert.ToInt32(Request.Form["num_floors"]);
+            System.Diagnostics.Debug.WriteLine("NumFloors: " + num_floors);
+            
+            for (int i = 0; i < num_floors; i++)
             {
                 db.Floors.Add(new Floor { HotelId = (int)Session["HotelId"], FloorNum = i + 1 });
                 
@@ -95,7 +100,15 @@ namespace RRDv2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,HotelId,FloorNum")] Floor floor)
+        
         {
+            //System.Diagnostics.Debug.WriteLine("before keys");
+            //String[] the_keys = Request.Form.AllKeys;
+            //foreach ( String key in the_keys ){
+            //    System.Diagnostics.Debug.WriteLine("the_key: " + key);
+
+            //}
+            //return this.Create((int)Session["HotelId"], Convert.ToInt32( Request.Form["num_floors"]));
             if (ModelState.IsValid)
             {
                 db.Entry(floor).State = EntityState.Modified;

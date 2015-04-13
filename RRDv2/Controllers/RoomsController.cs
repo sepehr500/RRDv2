@@ -20,7 +20,9 @@ namespace RRDv2.Controllers
             var rooms = db.Rooms.Include(r => r.Floor);
             if (FloorId != -1)
             {
-            rooms = db.Rooms.Where(x => x.FloorId == FloorId).Include(r => r.Floor);
+
+                Session["FloorId"] = FloorId;
+                rooms = db.Rooms.Where(x => x.FloorId == FloorId).Include(r => r.Floor);
 
             }
             return View(rooms.ToList());
@@ -45,7 +47,7 @@ namespace RRDv2.Controllers
         public ActionResult Create(int FloorId = -1)
         {
             ViewBag.FloorId = new SelectList(db.Floors, "Id", "Id");
-            Session["FloorId"] = FloorId;
+            //Session["FloorId"] = FloorId;
             return View();
         }
 
