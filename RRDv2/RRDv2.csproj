@@ -190,6 +190,14 @@
     <Compile Include="Migrations\201504132234149_VariousChanges.Designer.cs">
       <DependentUpon>201504132234149_VariousChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504140047185_AddedRoomNum.cs" />
+    <Compile Include="Migrations\201504140047185_AddedRoomNum.Designer.cs">
+      <DependentUpon>201504140047185_AddedRoomNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504140057139_moreupdates.cs" />
+    <Compile Include="Migrations\201504140057139_moreupdates.Designer.cs">
+      <DependentUpon>201504140057139_moreupdates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -303,6 +311,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504132234149_VariousChanges.resx">
       <DependentUpon>201504132234149_VariousChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504140047185_AddedRoomNum.resx">
+      <DependentUpon>201504140047185_AddedRoomNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504140057139_moreupdates.resx">
+      <DependentUpon>201504140057139_moreupdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

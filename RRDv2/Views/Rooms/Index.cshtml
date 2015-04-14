@@ -26,6 +26,18 @@
         <th>
             @Html.DisplayNameFor(model => model.RoomType)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ElevatorDistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConnectingRoom)
+        </th>
         <th></th>
     </tr>
 
@@ -45,6 +57,18 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RoomType.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElevatorDistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConnectingRoom)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

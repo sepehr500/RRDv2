@@ -7,12 +7,12 @@ namespace RRDv2.Models
 {
     public enum BedSize
     {
-        Twin,
-        TwinXL,
-        CaliforniaKing,
-        Queen,
         Full,
-        King
+        Queen,
+        King,
+        CaliforniaKing,
+        Twin,
+        TwinXL
     }
     //public enum RoomType
     //{
@@ -29,6 +29,7 @@ namespace RRDv2.Models
         public int Id { get; set; }
 
         public int FloorId { get; set; }
+        public int RoomNum { get; set; }
         public int RoomTypeId { get; set; }
         public int RoomLength { get; set; }
         public int RoomSize { get; set; }

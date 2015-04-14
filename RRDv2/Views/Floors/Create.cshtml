@@ -24,7 +24,7 @@
         </div>*@
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FloorNum, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FloorNum,"Create this many floors:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <input type="text" class="form-control" name="num_floors"/>
                 @*@Html.EditorFor(model => model.FloorNum, new { htmlAttributes = new { @class = "form-control", @Name= "num_floors" } })*@

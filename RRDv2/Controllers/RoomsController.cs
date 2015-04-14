@@ -26,7 +26,7 @@ namespace RRDv2.Controllers
 
             }
 
-            
+            ViewBag.FloorId = FloorId;
             return View(rooms.ToList());
         }
 
@@ -73,7 +73,6 @@ namespace RRDv2.Controllers
                     var num_rooms = db.RoomTypes.Where(x => x.Type == the_room_type).Count();
                     if (num_rooms == 0){
                         RoomType roomType = new RoomType();
-                        roomType.RoomId = 1;
                         roomType.Type = Request.Form["room_type"];
                         db.RoomTypes.Add(roomType);
                         room.RoomTypeId = roomType.Id;
@@ -114,7 +113,11 @@ namespace RRDv2.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.FloorId = new SelectList(db.Floors, "Id", "Id", room.FloorId);
+
+            
+            ViewBag.FloorId = new SelectList(db.Floors, "Id", "Id");
+            //ViewBag.FloorId = new SelectList(db.Floors, "Id", "Id", room.FloorId);
+            Session["RoomTypes"] = new SelectList(db.RoomTypes, "Type", "Type");
             return View(room);
         }
 
@@ -123,10 +126,42 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,RoomNum,NumberOfBeds,BedSize,RoomType, RoomSize, ElevatorDistance , ConnectingRoom")] Room room)
+        public ActionResult Edit([Bind(Include = "Id,FloorId,RoomNum,NumberOfBeds,BedSize,RoomType, RoomSize, ElevatorDistance , ConnectingRoom")] Room room)
         {
             if (ModelState.IsValid)
             {
+                var the_room_type = Request.Form["room_type"];
+                var the_room_selection = Request.Form["room_selection"];
+                System.Diagnostics.Debug.WriteLine("the_room_type: " + the_room_type);
+                System.Diagnostics.Debug.WriteLine("the_room_selection: " + Request.Form["room_selection"]);
+                if (Request.Form["room_selection"] == "Other")
+                {
+
+                    var num_rooms = db.RoomTypes.Where(x => x.Type == the_room_type).Count();
+                    if (num_rooms == 0)
+                    {
+                        RoomType roomType = new RoomType();
+                        roomType.Type = Request.Form["room_type"];
+                        db.RoomTypes.Add(roomType);
+                        room.RoomTypeId = roomType.Id;
+                        room.RoomType = roomType;
+                    }
+                    else
+                    {
+                        room.RoomTypeId = db.RoomTypes.Where(x => x.Type == Request.Form["room_type"]).First().Id;
+                        room.RoomType = db.RoomTypes.Where(x => x.Type == Request.Form["room_type"]).First();
+                    }
+                }
+                else
+                {
+                    var room_type = db.RoomTypes.Where(x => x.Type == the_room_selection).First();
+                    room.RoomTypeId = room_type.Id;
+                    room.RoomType = room_type;
+                }
+
+
+
+               
                 db.Entry(room).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

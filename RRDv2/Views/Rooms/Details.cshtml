@@ -47,9 +47,41 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RoomType)
+            @Html.DisplayFor(model => model.RoomType.Type)
         </dd>
 
+
+        <dt>
+            Room Size (ft)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomSize)
+        </dd>
+
+        <dt>
+            Room Length (ft)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomLength)
+        </dd>
+
+        <dt>
+            Elevator Distance (ft)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElevatorDistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectingRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConnectingRoom)
+        </dd>
     </dl>
 </div>
 <p>
