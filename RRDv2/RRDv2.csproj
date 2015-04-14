@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201504130342595_OnetoMany.Designer.cs">
       <DependentUpon>201504130342595_OnetoMany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504132234149_VariousChanges.cs" />
+    <Compile Include="Migrations\201504132234149_VariousChanges.Designer.cs">
+      <DependentUpon>201504132234149_VariousChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -296,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504130342595_OnetoMany.resx">
       <DependentUpon>201504130342595_OnetoMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504132234149_VariousChanges.resx">
+      <DependentUpon>201504132234149_VariousChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
