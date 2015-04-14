@@ -46,7 +46,7 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Zip,Name,State,Street")] Hotel hotel)
+        public ActionResult Create([Bind(Include = "Id,Zip,Name,City,State,Street")] Hotel hotel)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace RRDv2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Zip,Name,State,Street")] Hotel hotel)
+        public ActionResult Edit([Bind(Include = "Id,Zip,Name,City,State,Street")] Hotel hotel)
         {
             if (ModelState.IsValid)
             {
