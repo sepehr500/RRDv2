@@ -25,6 +25,8 @@ namespace RRDv2.Controllers
                 rooms = db.Rooms.Where(x => x.FloorId == FloorId).Include(r => r.Floor);
 
             }
+
+            
             return View(rooms.ToList());
         }
 
@@ -47,7 +49,8 @@ namespace RRDv2.Controllers
         public ActionResult Create(int FloorId = -1)
         {
             ViewBag.FloorId = new SelectList(db.Floors, "Id", "Id");
-            //Session["FloorId"] = FloorId;
+            //ViewBag.RoomTypes = new SelectList(db.RoomTypes, "Type", "Type");
+            Session["RoomTypes"] = new SelectList(db.RoomTypes, "Type", "Type");
             return View();
         }
 
@@ -60,8 +63,36 @@ namespace RRDv2.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                var the_room_type = Request.Form["room_type"];
+                var the_room_selection = Request.Form["room_selection"];
+                System.Diagnostics.Debug.WriteLine("the_room_type: " + the_room_type);
+                System.Diagnostics.Debug.WriteLine("the_room_selection: " + Request.Form["room_selection"]);
+                if (Request.Form["room_selection"] == "Other")
+                {
+
+                    var num_rooms = db.RoomTypes.Where(x => x.Type == the_room_type).Count();
+                    if (num_rooms == 0){
+                        RoomType roomType = new RoomType();
+                        roomType.RoomId = 1;
+                        roomType.Type = Request.Form["room_type"];
+                        db.RoomTypes.Add(roomType);
+                        room.RoomTypeId = roomType.Id;
+                        room.RoomType = roomType;
+                    }
+                    else{
+                        room.RoomTypeId = db.RoomTypes.Where(x => x.Type == Request.Form["room_type"]).First().Id;
+                        room.RoomType = db.RoomTypes.Where(x => x.Type == Request.Form["room_type"]).First();
+                    } 
+                }
+                else
+                {
+                    var room_type = db.RoomTypes.Where(x => x.Type == the_room_selection).First();
+                    room.RoomTypeId = room_type.Id;
+                    room.RoomType = room_type;
+                }
+
                 room.FloorId = (int)Session["FloorId"];
+
                 db.Rooms.Add(room);
                 db.SaveChanges();
                 return RedirectToAction("Index", new { FloorId = (int)Session["FloorId"] });

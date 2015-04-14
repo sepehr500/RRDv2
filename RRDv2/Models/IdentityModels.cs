@@ -30,6 +30,7 @@ namespace RRDv2.Models
         public DbSet<Floor> Floors { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<RoomType> RoomTypes { get; set; }
 
 
 

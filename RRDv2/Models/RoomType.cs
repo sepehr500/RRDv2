@@ -5,6 +5,7 @@ using System.Web;
 
 namespace RRDv2.Models
 {
+
     public class RoomType
     {
         public int Id { get; set; }

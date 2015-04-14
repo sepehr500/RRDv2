@@ -22,6 +22,7 @@ namespace RRDv2.Models
     //    Tripple,
     //    Standard
     //}
+    
     public class Room
     {
 
