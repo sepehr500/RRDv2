@@ -12,7 +12,12 @@ namespace RRDv2.Models
         King,
         CaliforniaKing,
         Twin,
-        TwinXL
+        TwinXL,
+        Double,
+        Folding,
+        Standard,
+        Day
+
     }
     //public enum RoomType
     //{
