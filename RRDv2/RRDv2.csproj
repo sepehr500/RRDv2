@@ -202,6 +202,10 @@
     <Compile Include="Migrations\201504142255342_city.Designer.cs">
       <DependentUpon>201504142255342_city.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504211835064_Nullables.cs" />
+    <Compile Include="Migrations\201504211835064_Nullables.Designer.cs">
+      <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -228,6 +232,8 @@
     <None Include="Properties\PublishProfiles\roomrundown - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\roomrundown - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\roomrundown.pubxml" />
+    <None Include="Properties\PublishProfiles\RRD - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\RRD - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504142255342_city.resx">
       <DependentUpon>201504142255342_city.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504211835064_Nullables.resx">
+      <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
