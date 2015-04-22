@@ -202,6 +202,7 @@
     <Compile Include="Migrations\201504142255342_city.Designer.cs">
       <DependentUpon>201504142255342_city.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201504171623145_nullable_roomtype.cs" />
     <Compile Include="Migrations\201504171623145_nullable_roomtype.Designer.cs">
       <DependentUpon>201504171623145_nullable_roomtype.cs</DependentUpon>
@@ -209,6 +210,11 @@
     <Compile Include="Migrations\201504171632079_remove_room_length.cs" />
     <Compile Include="Migrations\201504171632079_remove_room_length.Designer.cs">
       <DependentUpon>201504171632079_remove_room_length.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201504211835064_Nullables.cs" />
+    <Compile Include="Migrations\201504211835064_Nullables.Designer.cs">
+      <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -335,11 +341,16 @@
     <EmbeddedResource Include="Migrations\201504142255342_city.resx">
       <DependentUpon>201504142255342_city.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201504171623145_nullable_roomtype.resx">
       <DependentUpon>201504171623145_nullable_roomtype.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504171632079_remove_room_length.resx">
       <DependentUpon>201504171632079_remove_room_length.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201504211835064_Nullables.resx">
+      <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
