@@ -36,7 +36,12 @@ namespace RRDv2.Models
         public int FloorId { get; set; }
         public int RoomNum { get; set; }
 <<<<<<< HEAD
+<<<<<<< HEAD
         public int? RoomTypeId { get; set; }
+=======
+        public int RoomTypeId { get; set; }
+        public int RoomLength { get; set; }
+>>>>>>> parent of dac9cab... Thought I uploaded this
         public int RoomSize { get; set; }
 =======
         public int RoomTypeId { get; set; }

@@ -203,6 +203,7 @@
       <DependentUpon>201504142255342_city.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Migrations\201504171623145_nullable_roomtype.cs" />
     <Compile Include="Migrations\201504171623145_nullable_roomtype.Designer.cs">
       <DependentUpon>201504171623145_nullable_roomtype.cs</DependentUpon>
@@ -216,6 +217,8 @@
       <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
 >>>>>>> origin/master
     </Compile>
+=======
+>>>>>>> parent of dac9cab... Thought I uploaded this
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -242,8 +245,6 @@
     <None Include="Properties\PublishProfiles\roomrundown - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\roomrundown - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\roomrundown.pubxml" />
-    <None Include="Properties\PublishProfiles\RRD - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\RRD - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -342,6 +343,7 @@
       <DependentUpon>201504142255342_city.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201504171623145_nullable_roomtype.resx">
       <DependentUpon>201504171623145_nullable_roomtype.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +354,8 @@
       <DependentUpon>201504211835064_Nullables.cs</DependentUpon>
 >>>>>>> origin/master
     </EmbeddedResource>
+=======
+>>>>>>> parent of dac9cab... Thought I uploaded this
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
