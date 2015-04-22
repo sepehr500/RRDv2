@@ -41,7 +41,7 @@ namespace RRDv2.Models
         public int ElevatorDistance { get; set; }
         public bool ConnectingRoom { get; set; }
         public int NumberOfBeds { get; set; }
-        public BedSize BedSize { get; set; }
+        public BedSize? BedSize { get; set; }
         public virtual RoomType RoomType { get; set; }
         public virtual Floor Floor { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }

@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201504220024306_bed_type_changes.Designer.cs">
       <DependentUpon>201504220024306_bed_type_changes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504220114389_final_touches.cs" />
+    <Compile Include="Migrations\201504220114389_final_touches.Designer.cs">
+      <DependentUpon>201504220114389_final_touches.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floor.cs" />
@@ -338,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504220024306_bed_type_changes.resx">
       <DependentUpon>201504220024306_bed_type_changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504220114389_final_touches.resx">
+      <DependentUpon>201504220114389_final_touches.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
